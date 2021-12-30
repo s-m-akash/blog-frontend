@@ -1,0 +1,38 @@
+<form class="ui-fluid form-group" [formGroup]="logInForm">
+    <div class="ui-g">
+        <div class="ui-g-12">
+            <mat-card style="display: flex; justify-content: center; max-width: 30%; margin-top: 10em; margin-left: 35em; background-color: rgb(160, 207, 238); ">
+                <mat-card-content>
+                    <div class="ui-g ui-fluid">
+                    <div class="ui-g-12 ui-md-12">
+                        <div class="ui-g-12 ui-md-6" style="max-width: 20em;">
+                            <span>
+                                <label for="userName">Username</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email" size="30" formControlName = "userName">
+                            </span>
+                        </div>                        
+                    </div>
+                    <div class="ui-g-12 ui-md-12">
+                        <div class="ui-g-12 ui-md-5" style="max-width: 20em;">
+                            <label for="password" style="margin-top: 2em;">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password" formControlName = "password">
+                        </div>
+                    </div>
+                    <div style="margin-top: 2em; text-align: center;">
+                        <button type="submit" class="btn btn-primary mr-1" (click)="signUp()">Sign up</button>
+                        <button type="submit" class="btn btn-primary" (click)="logIn()">Login</button>
+                    </div>
+
+                    <div class="ui-g-12 ui-md-6" style="max-width: 20em; padding-top: 2em; text-align: center;">
+                        <span>
+                            <label>{{userCreationMsg}}</label>
+                        </span>
+                    </div>   
+                </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</form>

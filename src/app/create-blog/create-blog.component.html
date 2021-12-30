@@ -1,0 +1,30 @@
+<form class="ui-fluid form-group" [formGroup]="createBlogForm">
+    <div class="ui-g">
+        <div style="display: flex;flex-direction: row;width:100%;padding-bottom:10px">
+            <mat-card style="flex: 3">
+                <mat-card-content>
+                    <body>
+
+                        <h3>Create Blog</h3>
+                        
+                        <div>
+                            <div>
+
+                            
+                            <label for="fname">Blog Title:</label>
+                            <textarea formControlName="blogTitle" rows="2" cols="140"> </textarea>
+                        </div>
+                        <div>
+                            <label for="lname">Blog:</label>
+                            <textarea formControlName="blogBody" rows="10" cols="140"> </textarea>  
+                        </div>
+                            
+                            <input type="submit" value="Submit" (click)="submit()">
+                          
+                        </div>
+                        
+                        </body>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>

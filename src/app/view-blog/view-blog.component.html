@@ -1,0 +1,13 @@
+<section>
+  <mat-card *ngFor="let blog of blogs ">
+    <mat-card-content routerLink="{{blog.id}}">
+      <h2>{{blog.blogTitle}}</h2>
+      <h4>{{blog.blogBody}}</h4>
+    </mat-card-content>
+    <mat-card-actions align="end" *ngIf="currentUserId === blog.authorId">
+      <button mat-icon-button (click)="delete(blog.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</section>
